@@ -1,3 +1,2 @@
-/** logo */
-export { default as logo_white } from './logo_white.svg';
-export { default as logo_black } from './logo_black.svg';
+export { default as logo } from './logo.svg';
+export { default as play } from './play.svg';

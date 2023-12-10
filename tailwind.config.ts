@@ -4,6 +4,13 @@ const config: Config = {
   content: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      colors: {
+        primary: '#1CD79F',
+        grey50: '#F9F8F8',
+        grey200: '#D9D9D9',
+        grey400: '#BDBDBD',
+        grey500: '#9F9F9F',
+      },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],
       },

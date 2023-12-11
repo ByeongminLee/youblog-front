@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { InputButton } from './InputButton';
 import { Text } from './Text';
+import tw from '@/utils/tw';
 
 export const ArticleFooter = () => {
   const router = useRouter();
@@ -11,9 +12,9 @@ export const ArticleFooter = () => {
   };
 
   return (
-    <div className="px-4 py-8 bg-grey50 mb-10">
+    <div className="px-4 py-8 bg-grey50 mb-10 ">
       <Text variant="20px/bold">{'새로운 영상도\n궁금하다면?'}</Text>
-      <InputButton className={'mb-[32px]'} onClick={handler} />
+      <InputButton className={tw('mt-4 mb-[32px]', '[&>input]:bg-white')} onClick={handler} />
     </div>
   );
 };

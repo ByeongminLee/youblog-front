@@ -19,7 +19,7 @@ export const Text = <C extends React.ElementType = 'span'>({ as, children, class
 };
 
 const variants = {
-  '24px/Menu': 'font-extrabold text-[24px] leading-[29.26px]',
+  '24px/Menu': 'font-extrabold text-[24px] leading-[29.26px] font-montserrat',
   '20px/bold': 'font-bold text-[20px] leading-[26px] tracking-[-2%]',
   '16px/bold': 'font-bold text-[16px] leading-[24px] tracking-[-2%]',
   '16px/regular': 'text-[16px] leading-[24px] tracking-[-2%]',

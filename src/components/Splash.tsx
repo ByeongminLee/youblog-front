@@ -26,7 +26,7 @@ export const Splash = () => {
   }
 
   return (
-    <div className={tw('w-full h-full min-w-screen min-h-screen', 'fixed top-0 left-0', 'bg-black')}>
+    <div className={tw('w-full h-full min-w-screen min-h-screen', 'fixed top-0 left-0', 'bg-black', 'z-[9999999]')}>
       <motion.div
         initial="initial"
         animate="animate"

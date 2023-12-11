@@ -10,10 +10,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, disabled, isLoading = false, ...restProps }, ref) => {
     return (
       <button ref={ref} disabled={disabled} className={tw('w-full', className)} {...restProps}>
-        <span className="flex items-center justify-center">
-          {isLoading && <ProgressCircular />}
-          {children}
-        </span>
+        {isLoading && <ProgressCircular />}
+        {children}
       </button>
     );
   },

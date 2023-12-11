@@ -17,8 +17,10 @@ export const InputButton = ({ className, onClick }: { className?: string; onClic
     <div className={tw(styles.container, className)}>
       <Input className={tw(styles.input)} placeholder="Youtube URL 주소를 입력해 주세요" />
       <Button className={styles.button} onClick={onClick}>
-        만들기
-        <Icon name="play" className=" text-primary ml-1.5" />
+        <span className="flex justify-center items-center">
+          만들기
+          <Icon name="play" className=" text-primary ml-1.5" />
+        </span>
       </Button>
     </div>
   );

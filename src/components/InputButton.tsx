@@ -12,11 +12,11 @@ const styles = {
   button: 'bg-[#000] text-[#fff]  basis-1/5 min-w-[88px] font-bold text-[14px]',
 };
 
-export const InputButton = ({ className }: { className?: string }) => {
+export const InputButton = ({ className, onClick }: { className?: string; onClick?: () => void }) => {
   return (
     <div className={tw(styles.container, className)}>
       <Input className={tw(styles.input)} placeholder="Youtube URL 주소를 입력해 주세요" />
-      <Button className={styles.button}>
+      <Button className={styles.button} onClick={onClick}>
         만들기
         <Icon name="play" className=" text-primary ml-1.5" />
       </Button>

@@ -43,7 +43,7 @@ export const Tabs = ({ children, selected, setSelected, variant = 'solid' }: Tab
 
   return (
     <div>
-      <div className="relative w-128">
+      <div className="relative w-full">
         <div className={containerStyle}>
           {Children.map(children, (child, idx) => {
             if (isValidElement(child)) {
@@ -81,8 +81,13 @@ const useTabsStyle = ({ variant }: { variant: TabVariants }) => {
   const styles: stylesType = {
     solid: {
       container: ['flex space-x-2 w-full', 'bg-grey50', 'h-[50px]'],
-      button: ['relative w-full', '', 'bg-grey50', 'font-bold text-[16px] data-[selected=true]:text-black50 text-grey400'],
-      content: ['absolute top-1/2 transform  -translate-y-1/2 block transition-all duration-300', 'bg-white', 'h-[48px]'],
+      button: ['relative w-full', 'bg-grey50', 'font-bold text-[16px] data-[selected=true]:text-black50 text-grey400'],
+      content: [
+        'absolute top-1/2 transform  -translate-y-1/2 block transition-all duration-300',
+        'bg-white',
+        'h-[48px]',
+        'border border-grey50',
+      ],
     },
     underline: {
       container: ['flex space-x-2 w-full', 'h-[50px]'],

@@ -5,7 +5,7 @@ import { Nav } from '@/components/Nav';
 
 export default function Page() {
   return (
-    <div className="w-full px-4 ">
+    <div className="w-full">
       <Nav title={dummy.title} isLeft={true} isRight={true} />
       <iframe
         className="w-full h-[242px]"
@@ -15,7 +15,7 @@ export default function Page() {
         allowFullScreen
       />
       <ArticleTabs contents={dummy.contents} />
-      <div className="my-4">
+      <div className="my-4 px-6">
         <CopyPost contents={dummy.contents} />
       </div>
       <ArticleFooter />

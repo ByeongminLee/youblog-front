@@ -7,7 +7,7 @@ export default function Page() {
       <div>
         <Nav isRight={true} />
       </div>
-      <div className="h-2/3">
+      <div className="h-2/3 px-4">
         <SignIn />
       </div>
       <div />

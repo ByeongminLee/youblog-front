@@ -1,8 +1,8 @@
 {
   "name": "youblog",
   "short_name": "youblog",
-  "theme_color": "#1CD79F",
-  "background_color": "#fafafa",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

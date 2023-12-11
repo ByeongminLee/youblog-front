@@ -33,7 +33,7 @@ export const Nav = ({ isLeft = false, isRight = false, title }: NavProps) => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full h-16 flex items-center justify-between bg-white z-[9999] max-w-[400px]">
+      <nav className="fixed top-0 w-full h-16 flex items-center justify-between bg-white z-[9999] max-w-[430px] p-4">
         {isOpen && (
           <motion.div className="z-40" initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.5 } }}>
             <Text variant="24px/Menu">List</Text>

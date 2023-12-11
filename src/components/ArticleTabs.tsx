@@ -22,7 +22,7 @@ export const ArticleTabs = ({ contents }: { contents: any }) => {
         <Tab value="instagram">인스타그램</Tab>
         <Tab value="brunch">브런치</Tab>
       </Tabs>
-      <div className="mt-6">
+      <div className="mt-6 px-6">
         <div dangerouslySetInnerHTML={{ __html: contents }} />
       </div>
     </div>

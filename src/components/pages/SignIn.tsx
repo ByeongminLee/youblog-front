@@ -1,4 +1,5 @@
 import { Icon } from '../Icon';
+import { SnsButton } from '../SnsButton';
 import { Text } from '../Text';
 
 export const SignIn = () => {
@@ -11,6 +12,10 @@ export const SignIn = () => {
       <Text variant="14px/regular" className="text-grey500 mb-[60px]">
         {'유블로그를 사용하기 위해\n로그인이 필요합니다'}
       </Text>
+      <div className="flex flex-col gap-3">
+        <SnsButton type="kakao" />
+        <SnsButton type="google" />
+      </div>
     </div>
   );
 };

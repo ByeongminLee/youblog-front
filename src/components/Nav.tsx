@@ -31,6 +31,10 @@ export const Nav = ({ isLeft = false, isRight = false, title }: NavProps) => {
     };
   }, [isOpen]);
 
+  const LogoutHandler = () => {
+    router.push('/');
+  };
+
   return (
     <>
       <nav className="fixed top-0 w-full h-16 flex items-center justify-between bg-white z-[9999] max-w-[430px] p-4">
@@ -80,7 +84,7 @@ export const Nav = ({ isLeft = false, isRight = false, title }: NavProps) => {
               </List>
             </Menu.body>
             <Menu.footer>
-              <Logout LogoutHandler={() => alert('로그아웃')} name="테스트" />
+              <Logout LogoutHandler={LogoutHandler} name="테스트" />
             </Menu.footer>
           </Menu>
         )}

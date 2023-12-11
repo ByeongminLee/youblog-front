@@ -19,8 +19,8 @@ export default function Page() {
   return (
     <>
       <Splash />
-      <main className="h-full max-h-screen overflow-hidden">
-        <div className="flex flex-col h-screen justify-between">
+      <main className="h-full max-h-dscreen overflow-hidden">
+        <div className="flex flex-col h-dscreen justify-between">
           <div>
             <Nav isRight={true} />
           </div>

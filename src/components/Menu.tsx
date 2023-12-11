@@ -6,9 +6,9 @@ export const Menu = ({ children }: { children: React.ReactNode }) => {
       initial="initial"
       animate={'animate'}
       variants={motionVariants}
-      className="bg-white w-full h-full fixed top-0 left-0 z-30 min-h-screen flex flex-col "
+      className="bg-white w-full h-full fixed top-0 left-0 z-30 min-h-dscreen flex flex-col "
     >
-      <div className="z-40 max-w-[400px] w-full mx-auto flex flex-col justify-between h-screen px-4 overflow-auto">{children}</div>
+      <div className="z-40 max-w-[400px] w-full mx-auto flex flex-col justify-between h-dscreen px-4 overflow-auto">{children}</div>
     </motion.div>
   );
 };

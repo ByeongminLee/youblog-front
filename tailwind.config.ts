@@ -10,6 +10,7 @@ const config: Config = {
         grey200: '#D9D9D9',
         grey400: '#BDBDBD',
         grey500: '#9F9F9F',
+        black50: '#1e1e1e',
       },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],

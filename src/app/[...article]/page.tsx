@@ -5,7 +5,7 @@ import { Nav } from '@/components/Nav';
 
 export default function Page() {
   return (
-    <div className="w-full">
+    <div className="w-full px-4 ">
       <Nav title={dummy.title} isLeft={true} isRight={true} />
       <iframe
         className="w-full h-[242px]"

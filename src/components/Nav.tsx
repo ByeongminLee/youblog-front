@@ -45,7 +45,7 @@ export const Nav = ({ isLeft = false, isRight = false, title }: NavProps) => {
         )}
         {isLeft && (
           <div className="justify-start">
-            <Icon name="arrow_left" className="w-8 h-8 cursor-pointer" onClick={() => router.back()} />
+            <Icon name="arrow_left" className="w-8 h-8 cursor-pointer" onClick={() => router.push('/')} />
           </div>
         )}
         <div className="px-[15px]">{title}</div>

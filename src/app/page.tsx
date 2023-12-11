@@ -18,7 +18,7 @@ export default function Page() {
 
   return (
     <>
-      <Splash />
+      {/* <Splash /> */}
       <main className="h-full max-h-screen overflow-hidden">
         <div className="flex flex-col h-screen justify-between">
           <div>

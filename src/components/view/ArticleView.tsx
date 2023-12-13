@@ -45,7 +45,7 @@ export const ArticleView = ({ data }: { data: any }) => {
             />
             <ArticleFooter />
           </div>
-          <div className="w-1/3 pt-8  border-l border-grey200">
+          <div className="w-1/3 pt-8  border-l border-grey200 h-[calc(100dvh-50px)] overflow-auto">
             <ArticleTabs selected={selected} setSelected={setSelected} className="px-10" contents={data.contents} />
 
             {selected === 'post' && (

@@ -1,30 +1,32 @@
 'use client';
 
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { Tab, Tabs } from '../common/Tabs';
+import tw from '@/utils/tw';
+import { ContentsPost } from './ContentsPost';
+import { ContentsChat } from './ContentsChat';
 
-export const ArticleTabs = ({ contents }: { contents: any }) => {
-  const [selected, setSelected] = useState('ts');
-  const [subSelected, setSubSelected] = useState('ts');
+interface ArticleTabsProps {
+  selected: string;
+  setSelected: Dispatch<SetStateAction<string>>;
+  contents: any;
+  className?: string;
+}
 
+export const ArticleTabs = ({ selected, setSelected, contents, className }: ArticleTabsProps) => {
   return (
-    <div className="mt-2">
+    <div className={tw('mt-2 h-full', className)}>
       <div className="mb-[24px]">
         <Tabs selected={selected} setSelected={setSelected}>
           <Tab value="post" className="whitespace-nowrap">
-            글로 변환하기 💬
+            글로 변환하기 {selected === 'post' && '💬'}
           </Tab>
-          <Tab value="chat">채팅 Q&A</Tab>
+          <Tab value="chat">채팅 Q&A {selected === 'chat' && '💡'}</Tab>
         </Tabs>
       </div>
-      <Tabs selected={subSelected} setSelected={setSubSelected} variant="underline">
-        <Tab value="blog">블로그</Tab>
-        <Tab value="instagram">인스타그램</Tab>
-        <Tab value="brunch">브런치</Tab>
-      </Tabs>
-      <div className="mt-6 px-6">
-        <div dangerouslySetInnerHTML={{ __html: contents }} />
-      </div>
+      {selected === 'post' && <ContentsPost contents={contents} />}
+
+      {selected === 'chat' && <ContentsChat />}
     </div>
   );
 };

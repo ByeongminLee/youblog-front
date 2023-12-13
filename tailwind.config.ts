@@ -10,6 +10,9 @@ const config: Config = {
       desktop: '640px',
     },
     extend: {
+      height: {
+        dscreen: '100dvh',
+      },
       colors: {
         primary: '#1CD79F',
         grey50: '#F9F8F8',

@@ -10,7 +10,7 @@ export const List = ({ children }: { children: React.ReactNode }) => {
 const Item = ({ children, selected = false }: { children: React.ReactNode; selected?: boolean }) => {
   return (
     <div
-      className="flex items-center py-4 px-3 data-[selected=true]:bg-grey50 rounded-lg cursor-pointer hover:bg-grey50"
+      className="flex items-center py-4 data-[selected=true]:bg-grey50 rounded-lg cursor-pointer hover:bg-grey50"
       data-selected={selected}
     >
       <div>
@@ -18,10 +18,7 @@ const Item = ({ children, selected = false }: { children: React.ReactNode; selec
       </div>
       <Text
         variant="16px/regular"
-        className={tw(
-          ' whitespace-nowrap text-ellipsis overflow-hidden max-w-[calc(400px-65px)]',
-          selected ? 'text-black50' : 'text-grey500',
-        )}
+        className={tw(' whitespace-nowrap text-ellipsis overflow-hidden ', selected ? 'text-black50' : 'text-grey500')}
       >
         {children}
       </Text>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Tab, Tabs } from './Tabs';
+import { Tab, Tabs } from '../common/Tabs';
 
 export const ArticleTabs = ({ contents }: { contents: any }) => {
   const [selected, setSelected] = useState('ts');

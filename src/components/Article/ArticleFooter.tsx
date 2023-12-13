@@ -1,8 +1,8 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { InputButton } from './InputButton';
-import { Text } from './Text';
+import { InputButton } from '../common/InputButton';
+import { Text } from '../common/Text';
 import tw from '@/utils/tw';
 
 export const ArticleFooter = () => {

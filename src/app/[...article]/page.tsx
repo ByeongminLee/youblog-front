@@ -1,26 +1,7 @@
-import { ArticleFooter } from '@/components/ArticleFooter';
-import { ArticleTabs } from '@/components/ArticleTabs';
-import { CopyPost } from '@/components/CopyPost';
-import { Nav } from '@/components/Nav';
+import { ArticleView } from '@/components/view';
 
 export default function Page() {
-  return (
-    <div className="w-full">
-      <Nav title={dummy.title} isLeft={true} isRight={true} />
-      <iframe
-        className="w-full h-[242px]"
-        src={dummy.url}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      />
-      <ArticleTabs contents={dummy.contents} />
-      <div className="my-4 px-6">
-        <CopyPost contents={dummy.contents} />
-      </div>
-      <ArticleFooter />
-    </div>
-  );
+  return <ArticleView data={dummy} />;
 }
 
 const dummy = {

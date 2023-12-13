@@ -6,9 +6,9 @@ export const Menu = ({ children }: { children: React.ReactNode }) => {
       initial="initial"
       animate={'animate'}
       variants={motionVariants}
-      className="bg-white w-full h-full fixed top-0 left-0 z-30 min-h-screen flex flex-col "
+      className="w-full min-h-dscreen h-full overflow-auto flex  flex-col justify-center items-center mt-16"
     >
-      <div className="z-40 max-w-[400px] w-full mx-auto flex flex-col justify-between h-screen px-4 overflow-auto">{children}</div>
+      <div className="max-w-[430px] desktop:max-w-full w-full px-4">{children}</div>
     </motion.div>
   );
 };
@@ -19,11 +19,11 @@ const motionVariants = {
 };
 
 const body = ({ children }: { children: React.ReactNode }) => {
-  return <div className="mt-[70px]  overflow-auto">{children}</div>;
+  return <div className="overflow-auto h-[calc(100vh-200px)]">{children}</div>;
 };
 
 const footer = ({ children }: { children: React.ReactNode }) => {
-  return <div className="mb-8">{children}</div>;
+  return <div className="w-full my-4">{children}</div>;
 };
 
 Menu.body = body;

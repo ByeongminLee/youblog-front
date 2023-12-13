@@ -1,9 +1,9 @@
 'use client';
-import { Splash } from '@/components/Splash';
-import { Home } from '@/components/pages/Home';
-import { Loading } from '@/components/pages/Loading';
+import { SplashView } from '@/components/view/SplashView';
+import { HomeView } from '@/components/view/HomeView';
+import { LoadingView } from '@/components/view/LoadingView';
 import { useState } from 'react';
-import { Nav } from '@/components/Nav';
+import { Nav } from '@/components/common/Nav';
 import { useRouter } from 'next/navigation';
 
 export default function Page() {
@@ -18,13 +18,13 @@ export default function Page() {
 
   return (
     <>
-      {/* <Splash /> */}
-      <main className="h-full max-h-screen overflow-hidden">
-        <div className="flex flex-col h-screen justify-between">
+      <SplashView />
+      <main className="h-full max-h-dscreen overflow-hidden max-w-[430px] mx-auto desktop:max-w-[1440px]">
+        <div className="flex flex-col h-dscreen justify-between">
           <div>
             <Nav isRight={true} />
           </div>
-          <div className="h-1/2 px-4">{isLoading ? <Loading /> : <Home onClick={handler} />}</div>
+          <div className="h-1/2 px-4">{isLoading ? <LoadingView /> : <HomeView onClick={handler} />}</div>
           <div />
         </div>
       </main>

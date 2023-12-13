@@ -1,5 +1,5 @@
 import React from 'react';
-import * as svgs from '../../public/assets/svgs';
+import * as svgs from '../../../public/assets/svgs';
 
 export type IconNameType = keyof typeof svgs;
 

@@ -1,6 +1,6 @@
 'use client';
 import tw from '@/utils/tw';
-import { Icon } from './Icon';
+import { Icon } from '../common/Icon';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -9,7 +9,7 @@ const motionVariants = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3 } },
 };
 
-export const Splash = () => {
+export const SplashView = () => {
   const [isVisible, setIsVisible] = useState(true);
   const time = 1500;
 
@@ -26,7 +26,7 @@ export const Splash = () => {
   }
 
   return (
-    <div className={tw('w-full h-full min-w-screen min-h-screen', 'fixed top-0 left-0', 'bg-black', 'z-[9999999]')}>
+    <div className={tw('w-full h-full min-w-screen min-h-dscreen', 'fixed top-0 left-0', 'bg-black', 'z-[9999999]')}>
       <motion.div
         initial="initial"
         animate="animate"

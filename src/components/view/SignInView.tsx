@@ -17,7 +17,7 @@ export const SignInView = () => {
           <div>
             <Nav isRight={true} />
           </div>
-          <div className="h-2/3 px-4">
+          <div className="h-1/2 px-4 mb-[300px]">
             <div className="flex flex-col">
               <Text variant="24px/Menu" className="mb-[12px]">
                 {'영상으로\n블로그 시작하기'}
@@ -32,10 +32,11 @@ export const SignInView = () => {
               </div>
             </div>
           </div>
+          <div />
         </div>
       ) : (
         <div className="flex flex-col h-dscreen justify-center">
-          <div className="h-1/2 px-4">
+          <div className="h-1/2 px-4 mb-[300px]">
             <div className="flex flex-col">
               <div className="flex mb-14">
                 <div className="mr-[120px] py-4">

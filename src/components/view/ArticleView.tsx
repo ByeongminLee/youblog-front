@@ -35,7 +35,7 @@ export const ArticleView = ({ data }: { data: any }) => {
         </div>
       ) : (
         <div className="box-border mx-auto max-w-[1440px] flex">
-          <div className="w-2/3 pt-8 px-10 flex flex-col justify-between h-[calc(100dvh-50px)]">
+          <div className="w-2/3 pt-8 px-10 flex flex-col justify-between h-[calc(100dvh-50px)]min-w-[590px]">
             <iframe
               className="w-full h-[692px]"
               src={data.url}
@@ -45,7 +45,7 @@ export const ArticleView = ({ data }: { data: any }) => {
             />
             <ArticleFooter />
           </div>
-          <div className="w-1/3 pt-8  border-l border-grey200 h-[calc(100dvh-50px)] overflow-auto">
+          <div className="w-1/3 pt-8  border-l border-grey200 h-[calc(100dvh-50px)] overflow-auto min-w-[335px]">
             <ArticleTabs selected={selected} setSelected={setSelected} className="px-10" contents={data.contents} />
 
             {selected === 'post' && (

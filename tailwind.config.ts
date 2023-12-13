@@ -3,6 +3,12 @@ import type { Config } from 'tailwindcss';
 const config: Config = {
   content: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
+    height: {
+      dscreen: '100dvh',
+    },
+    screens: {
+      desktop: '640px',
+    },
     extend: {
       height: {
         dscreen: '100dvh',
@@ -20,6 +26,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 };
 export default config;

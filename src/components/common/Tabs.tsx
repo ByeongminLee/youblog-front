@@ -19,7 +19,10 @@ export const Tab = ({ as, children, ref, className, onClick, value, variant }: T
 
   return (
     <Component
-      className={tw(variant === 'solid' && 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10', className)}
+      className={tw(
+        variant === 'solid' && 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 whitespace-nowrap',
+        className,
+      )}
       ref={ref}
       onClick={onClick}
       value={value}
@@ -92,7 +95,7 @@ const useTabsStyle = ({ variant }: { variant: TabVariants }) => {
     underline: {
       container: ['flex space-x-2 w-full', 'h-[50px]'],
       button: ['relative w-full', 'font-bold text-[16px] data-[selected=true]:text-black50 text-grey400'],
-      content: ['absolute bottom-0 block h-0.5 transition-all duration-300', 'bg-black'],
+      content: ['absolute bottom-0 block h-0.5 transition-all duration-300', 'bg-black', 'border-b border border-black50'],
     },
   };
   const containerStyle = tw(styles[variant].container);

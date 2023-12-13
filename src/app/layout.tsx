@@ -17,10 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko" className={`${montserrat.variable}`}>
       <link rel="manifest" href="/pwa/manifest.json" />
-      <meta name="theme-color" content="#ffffff" />
-      <body>
-        <div className="max-w-[430px] mx-auto">{children}</div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

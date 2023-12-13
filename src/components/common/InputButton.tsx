@@ -4,7 +4,7 @@ import { Icon } from './Icon';
 import Input from './Input';
 
 const styles = {
-  container: ['flex w-full h-12 rounded-md overflow-hidden', 'desktop:w-[420px] desktop:h-60px'],
+  container: ['flex w-full h-12 rounded-md overflow-hidden', 'desktop:max-w-[420px] desktop:h-60px'],
   input: [
     'basis-4/5 bg-grey50 px-[12px] py-[14px] text-[14px] focus:outline-none',
     'placeholder:tracking-[-2%] placeholder:leading-[22px] placeholder-grey400',

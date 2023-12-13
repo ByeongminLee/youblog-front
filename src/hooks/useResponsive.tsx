@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect, useCallback } from 'react';
 
-const MOBILE_SIZE = 640;
+const MOBILE_SIZE = 768;
 
 const useResponsive = () => {
   const [isMobile, setIsMobile] = useState(false);

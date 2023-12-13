@@ -7,7 +7,7 @@ const config: Config = {
       dscreen: '100dvh',
     },
     screens: {
-      desktop: '640px',
+      desktop: '768px',
     },
     extend: {
       height: {

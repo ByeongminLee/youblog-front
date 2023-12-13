@@ -45,7 +45,7 @@ export const SignInView = () => {
                     {'유블로그를 사용하기 위해\n로그인이 필요합니다'}
                   </Text>
                 </div>
-                <Image width={270} height={258} src={'/assets/imgs/auth_desktop.png'} alt="auth images" />
+                <Image width={270} height={258} src={'/assets/imgs/auth_desktop.png'} alt="auth images" priority={true} />
               </div>
               <div className="flex gap-4">
                 <SnsButton type="kakao" className={'w-[320px]'} />

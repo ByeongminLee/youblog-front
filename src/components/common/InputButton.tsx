@@ -12,11 +12,22 @@ const styles = {
   ],
   button: ['bg-[#000] text-[#fff]  basis-1/5 min-w-[88px] font-bold text-[14px]'],
 };
-
-export const InputButton = ({ className, onClick }: { className?: string; onClick?: () => void }) => {
+interface InputButtonProps {
+  className?: string;
+  onClick?: () => void;
+  inputValue: { [key: string]: string };
+  handleChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+export const InputButton = ({ className, onClick, inputValue, handleChangeInput }: InputButtonProps) => {
   return (
     <div className={tw(styles.container, className)}>
-      <Input className={tw(styles.input)} placeholder="Youtube URL 주소를 입력해 주세요" />
+      <Input
+        className={tw(styles.input)}
+        placeholder="Youtube URL 주소를 입력해 주세요"
+        value={inputValue['youtubeUrl']}
+        name="youtubeUrl"
+        onChange={handleChangeInput}
+      />
       <Button className={tw(styles.button)} onClick={onClick}>
         <span className="flex justify-center items-center desktop:text-[16px]">
           만들기

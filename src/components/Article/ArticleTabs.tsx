@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { Tab, Tabs } from '../common/Tabs';
 import tw from '@/utils/tw';
 import { ContentsPost } from './ContentsPost';

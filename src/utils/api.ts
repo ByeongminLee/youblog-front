@@ -1,3 +1,5 @@
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000';
+
 type MethodType = 'GET' | 'POST';
 
 export const fetcher = async (path: string, method: MethodType, body?: any) => {
@@ -18,7 +20,7 @@ export const fetcher = async (path: string, method: MethodType, body?: any) => {
   }
 
   try {
-    const res = await fetch('/api' + path, options);
+    const res = await fetch(BASE_URL + path, options);
 
     if (!res.ok) {
       const errorMessage = `Network response was not ok. Status: ${res.status}, ${res.statusText}`;

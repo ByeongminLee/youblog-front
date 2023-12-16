@@ -15,7 +15,7 @@ export default function Page() {
     error,
   } = useQuery({
     queryKey: ['article'],
-    queryFn: () => fetcher('/article', 'POST', JSON.stringify({ youtubeUrl: getYoutubeURL(key ?? '') })),
+    queryFn: () => fetcher('/post', 'POST', JSON.stringify({ youtubeUrl: getYoutubeURL(key ?? '') })),
     enabled: !!key,
   });
 

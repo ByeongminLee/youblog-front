@@ -19,6 +19,8 @@ export async function POST(request: Request) {
     };
   }
 
+  console.log('\nrequest:', requestOptions);
+
   const result = await fetch(`${BASE_URL}/post`, requestOptions)
     .then(res => res.json())
     .then(data => {

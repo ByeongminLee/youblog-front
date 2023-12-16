@@ -3,3 +3,4 @@ export * from './HomeView';
 export * from './SignInView';
 export * from './SplashView';
 export * from './LoadingView';
+export * from './ErrorView';

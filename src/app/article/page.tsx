@@ -1,5 +1,5 @@
 'use client';
-import { ArticleView, LoadingView } from '@/components/view';
+import { ArticleView, ErrorView, LoadingView } from '@/components/view';
 import { fetcher } from '@/utils/api';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
@@ -33,6 +33,10 @@ export default function Page() {
 
   if (isLoading) {
     return <LoadingView />;
+  }
+
+  if (error) {
+    return <ErrorView />;
   }
 
   return (

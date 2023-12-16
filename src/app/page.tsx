@@ -29,17 +29,7 @@ export default function Page() {
   return (
     <>
       <SplashView />
-      <main className="h-full max-h-dscreen overflow-hidden max-w-[430px] mx-auto desktop:max-w-[1440px]">
-        <div className="flex flex-col h-dscreen justify-between">
-          <div>
-            <Nav isRight={true} />
-          </div>
-          <div className="h-1/2 px-4">
-            <HomeView onClick={handler} inputValue={inputValue} handleChangeInput={handleChangeInput} />
-          </div>
-          <div />
-        </div>
-      </main>
+      <HomeView onClick={handler} inputValue={inputValue} handleChangeInput={handleChangeInput} />
     </>
   );
 }

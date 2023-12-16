@@ -27,4 +27,5 @@ const variants = {
   '16px/bold': 'font-bold text-[16px] leading-[24px] tracking-[-2%]',
   '16px/regular': 'text-[16px] leading-[24px] tracking-[-2%]',
   '14px/regular': 'text-[14px] leading-[22px] tracking-[-2%]',
+  '14px/bold': 'font-bold text-[14px] leading-[22px] tracking-[-2%]',
 };

@@ -38,7 +38,7 @@ export const Nav = ({ isLeft = false, isRight = false, title, className }: NavPr
         <div className="flex items-center justify-between">
           {isLeft && <Icon name="arrow_left" className="w-8 h-8 cursor-pointer" onClick={() => router.push('/')} />}
           <div className="w-full px-[15px]">{title}</div>
-          {isRight && (
+          {false && isRight && (
             <div className="desktop:fixed desktop:top-0 desktop:right-0 desktop:px-6 desktop:py-2 cursor-pointer">
               <Icon name="hamburger" className="w-8 h-8" onClick={menuHandler} />
             </div>

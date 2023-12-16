@@ -12,7 +12,7 @@ export const fetcher = async (path: string, method: MethodType, body?: any) => {
 
   if (body) {
     try {
-      options.body = JSON.stringify(body);
+      options.body = body;
     } catch (error) {
       console.error('Error serializing request body to JSON:', error);
       throw error;

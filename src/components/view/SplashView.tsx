@@ -31,7 +31,7 @@ export const SplashView = () => {
         initial="initial"
         animate="animate"
         variants={motionVariants}
-        className={tw('w-[130px]', 'absolute top-1/3 left-[calc(50%-65px)] transform -translate-y-1/2')}
+        className={tw('w-full absolute top-1/3 flex items-center justify-center transform -translate-y-1/2')}
       >
         <Icon name="logo" className={tw('w-[130px] desktop:w-[280px] text-white')} />
       </motion.div>

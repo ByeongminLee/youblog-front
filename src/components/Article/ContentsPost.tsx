@@ -3,6 +3,7 @@ import { Tab, Tabs } from '../common/Tabs';
 
 export const ContentsPost = ({ contents }: { contents: any }) => {
   const [subSelected, setSubSelected] = useState('blog');
+
   return (
     <>
       <Tabs selected={subSelected} setSelected={setSubSelected} variant="underline">

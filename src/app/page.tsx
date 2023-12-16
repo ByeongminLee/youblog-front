@@ -1,20 +1,30 @@
 'use client';
+
 import { SplashView } from '@/components/view/SplashView';
 import { HomeView } from '@/components/view/HomeView';
-import { LoadingView } from '@/components/view/LoadingView';
-import { useState } from 'react';
 import { Nav } from '@/components/common/Nav';
 import { useRouter } from 'next/navigation';
+import { useInput } from '@/hooks/useInput';
+import { useEffect } from 'react';
 
 export default function Page() {
-  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const [inputValue, handleChangeInput, inputReset] = useInput({ youtubeUrl: '' });
+
   const handler = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      router.replace('/article');
-    }, 2500);
+    if (!inputValue.youtubeUrl.includes('www.youtube.com')) return;
+
+    const getYoutubeKey = (url: string) => {
+      return url.replace('https://www.youtube.com/watch?v=', '');
+    };
+
+    router.push('/article?key=' + getYoutubeKey(inputValue.youtubeUrl));
   };
+
+  useEffect(() => {
+    if (inputValue.youtubeUrl === '') return;
+    inputReset('youtubeUrl');
+  }, []);
 
   return (
     <>
@@ -24,7 +34,9 @@ export default function Page() {
           <div>
             <Nav isRight={true} />
           </div>
-          <div className="h-1/2 px-4">{isLoading ? <LoadingView /> : <HomeView onClick={handler} />}</div>
+          <div className="h-1/2 px-4">
+            <HomeView onClick={handler} inputValue={inputValue} handleChangeInput={handleChangeInput} />
+          </div>
           <div />
         </div>
       </main>

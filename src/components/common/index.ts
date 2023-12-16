@@ -9,3 +9,4 @@ export * from './Nav';
 export * from './ProgressCircular';
 export * from './Tabs';
 export * from './Text';
+export * from './Providers';

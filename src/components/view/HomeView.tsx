@@ -3,7 +3,13 @@ import { Icon } from '../common/Icon';
 import { InputButton } from '../common/InputButton';
 import { Text } from '../common/Text';
 
-export const HomeView = ({ onClick }: { onClick: () => void }) => {
+interface HomeViewProps {
+  onClick: () => void;
+  inputValue: { [key: string]: string };
+  handleChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export const HomeView = ({ onClick, inputValue, handleChangeInput }: HomeViewProps) => {
   const { isMobile } = useResponsive();
 
   return (
@@ -14,7 +20,7 @@ export const HomeView = ({ onClick }: { onClick: () => void }) => {
             {'영상으로\n블로그 시작하기'}
           </Text>
           <Icon name="logo" className="text-black w-[140px] mb-[40px]" />
-          <InputButton className={'mb-[32px]'} onClick={onClick} />
+          <InputButton className={'mb-[32px]'} onClick={onClick} inputValue={inputValue} handleChangeInput={handleChangeInput} />
           <Text variant="14px/regular" className="text-right text-grey500">
             {'유튜브 영상을 블로그 포스팅에\n적합한 글로 바꿔줍니다.'}
           </Text>
@@ -28,7 +34,7 @@ export const HomeView = ({ onClick }: { onClick: () => void }) => {
           <Text variant="14px/regular" className="text-grey500 mb-[40px]">
             {'유튜브 영상을 블로그 포스팅에\n적합한 글로 바꿔줍니다.'}
           </Text>
-          <InputButton className={'mb-[32px]'} onClick={onClick} />
+          <InputButton className={'mb-[32px]'} onClick={onClick} inputValue={inputValue} handleChangeInput={handleChangeInput} />
         </div>
       )}
     </>

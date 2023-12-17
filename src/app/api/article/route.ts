@@ -19,14 +19,14 @@ export async function POST(request: Request) {
     };
   }
 
-  console.log(`\nurl:${BASE_URL}/post\nrequest:${requestOptions}`);
+  // console.log(`\nurl:${BASE_URL}/post\nrequest:${requestOptions}`);
 
   const result = await fetch(`${BASE_URL}/post`, requestOptions)
     .then(res => res.json())
     .then(data => {
       return data;
     });
-  console.log('\nresult data:', result);
+  // console.log('\nresult data:', result);
 
   return NextResponse.json(result);
 }

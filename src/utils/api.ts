@@ -20,7 +20,7 @@ export const fetcher = async (path: string, method: MethodType, body?: any) => {
   }
 
   try {
-    console.log('BASE_URL + path, options', BASE_URL + path, options);
+    // console.log('BASE_URL + path, options', BASE_URL + path, options);
     const res = await fetch(BASE_URL + path, options);
 
     if (!res.ok) {

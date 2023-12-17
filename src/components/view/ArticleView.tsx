@@ -44,7 +44,7 @@ export const ArticleView = ({ data }: { data: any }) => {
         <div className="box-border mx-auto flex">
           <div className="w-2/3 pt-8 px-10 flex flex-col justify-between h-[calc(100dvh-50px)]min-w-[590px]">
             <iframe
-              className="w-full h-[692px]"
+              className="w-full h-[60vh]"
               src={data.url}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

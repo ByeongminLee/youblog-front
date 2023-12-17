@@ -41,7 +41,7 @@ export const ArticleView = ({ data }: { data: any }) => {
           )}
         </div>
       ) : (
-        <div className="box-border mx-auto max-w-[1440px] flex">
+        <div className="box-border mx-auto flex">
           <div className="w-2/3 pt-8 px-10 flex flex-col justify-between h-[calc(100dvh-50px)]min-w-[590px]">
             <iframe
               className="w-full h-[692px]"
@@ -52,7 +52,7 @@ export const ArticleView = ({ data }: { data: any }) => {
             />
             <ArticleFooter />
           </div>
-          <div className="w-1/3 pt-8  border-l border-grey200 h-[calc(100dvh-50px)] overflow-auto min-w-[335px]">
+          <div className="w-1/3 pt-8  border-l border-grey200 h-[calc(100dvh-50px)] overflow-auto min-w-[335px] flex flex-col justify-between">
             <ArticleTabs
               selected={selected}
               setSelected={setSelected}
@@ -64,9 +64,11 @@ export const ArticleView = ({ data }: { data: any }) => {
 
             {selected === 'post' && (
               <>
-                <div className="border-b border-gray200 w-full" />
-                <div className="my-4 flex justify-end px-10">
-                  <CopyPost contents={data.contents} subSelected={subSelected} />
+                <div className=" flex justify-end flex-col">
+                  <div className="flex border-b border-gray200 w-full" />
+                  <div className="px-10 flex justify-end my-[10px]">
+                    <CopyPost contents={data.contents} subSelected={subSelected} />
+                  </div>
                 </div>
               </>
             )}

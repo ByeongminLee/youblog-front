@@ -8,11 +8,12 @@ export const ContentsPost = ({ contents }: { contents: any }) => {
     <>
       <Tabs selected={subSelected} setSelected={setSubSelected} variant="underline">
         <Tab value="blog">블로그</Tab>
-        <Tab value="instagram">인스타그램</Tab>
+        <Tab value="insta">인스타그램</Tab>
         <Tab value="brunch">브런치</Tab>
       </Tabs>
       <div className="mt-6 px-6">
-        <div dangerouslySetInnerHTML={{ __html: contents }} />
+        {/* <div dangerouslySetInnerHTML={{ __html: contents }} /> */}
+        <div dangerouslySetInnerHTML={{ __html: contents[subSelected] }} />
       </div>
     </>
   );

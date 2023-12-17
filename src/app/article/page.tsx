@@ -11,10 +11,13 @@ export default function Page() {
 
   const {
     isLoading,
+    isFetching,
     data: articleData,
     error,
+    refetch,
   } = useQuery({
-    queryKey: ['article'],
+    refetchOnWindowFocus: true,
+    queryKey: [`article${key}`],
     queryFn: () => fetcher('/post', 'POST', JSON.stringify({ youtubeUrl: getYoutubeURL(key ?? '') })),
     enabled: !!key,
   });
@@ -28,7 +31,9 @@ export default function Page() {
   };
 
   useEffect(() => {
-    if (!key) alert('잘못된 접근입니다.');
+    if (!key) {
+      alert('잘못된 접근입니다.');
+    }
   }, [key]);
 
   if (isLoading) {
@@ -42,7 +47,7 @@ export default function Page() {
   return (
     <ArticleView
       data={{
-        title: 'test',
+        title: articleData?.title,
         url: getYoutubeEmbed(key ?? ''),
         contents: articleData?.content,
       }}

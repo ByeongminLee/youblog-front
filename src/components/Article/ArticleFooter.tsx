@@ -12,7 +12,13 @@ export const ArticleFooter = ({ className }: { className?: string }) => {
   const [inputValue, handleChangeInput, inputReset] = useInput({ youtubeUrl: '' });
 
   const handler = () => {
-    alert('test');
+    if (!inputValue.youtubeUrl.includes('www.youtube.com')) return;
+
+    const getYoutubeKey = (url: string) => {
+      return url.replace('https://www.youtube.com/watch?v=', '');
+    };
+
+    router.replace(`/article?key=${getYoutubeKey(inputValue.youtubeUrl)}`);
   };
 
   return (

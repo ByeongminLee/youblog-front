@@ -2,7 +2,6 @@
 
 import { SplashView } from '@/components/view/SplashView';
 import { HomeView } from '@/components/view/HomeView';
-import { Nav } from '@/components/common/Nav';
 import { useRouter } from 'next/navigation';
 import { useInput } from '@/hooks/useInput';
 import { useEffect } from 'react';

@@ -15,9 +15,9 @@ export const ContentsPost = ({ contents, subSelected, setSubSelected }: Contents
         <Tab value="insta">인스타그램</Tab>
         <Tab value="brunch">브런치</Tab>
       </Tabs>
-      <div className="mt-6 px-6">
+      <div className="mt-6 px-6 whitespace-pre-wrap">
         {/* <div dangerouslySetInnerHTML={{ __html: contents }} /> */}
-        <div dangerouslySetInnerHTML={{ __html: contents[subSelected] }} />
+        <div dangerouslySetInnerHTML={{ __html: contents[subSelected] }} className="whitespace-pre-wrap" />
       </div>
     </>
   );

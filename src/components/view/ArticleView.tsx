@@ -8,6 +8,7 @@ import { useState } from 'react';
 export const ArticleView = ({ data }: { data: any }) => {
   const { isMobile } = useResponsive();
   const [selected, setSelected] = useState('post');
+  const [subSelected, setSubSelected] = useState('blog');
 
   return (
     <>
@@ -22,12 +23,18 @@ export const ArticleView = ({ data }: { data: any }) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
-          <ArticleTabs selected={selected} setSelected={setSelected} contents={data.contents} />
+          <ArticleTabs
+            selected={selected}
+            setSelected={setSelected}
+            subSelected={subSelected}
+            setSubSelected={setSubSelected}
+            contents={data.contents}
+          />
 
           {selected === 'post' && (
             <>
               <div className="my-4 px-6">
-                <CopyPost contents={data.contents} />
+                <CopyPost contents={data.contents} subSelected={subSelected} />
               </div>
               <ArticleFooter className="mb-10" />
             </>
@@ -46,13 +53,20 @@ export const ArticleView = ({ data }: { data: any }) => {
             <ArticleFooter />
           </div>
           <div className="w-1/3 pt-8  border-l border-grey200 h-[calc(100dvh-50px)] overflow-auto min-w-[335px]">
-            <ArticleTabs selected={selected} setSelected={setSelected} className="px-10" contents={data.contents} />
+            <ArticleTabs
+              selected={selected}
+              setSelected={setSelected}
+              subSelected={subSelected}
+              setSubSelected={setSubSelected}
+              className="px-10"
+              contents={data.contents}
+            />
 
             {selected === 'post' && (
               <>
                 <div className="border-b border-gray200 w-full" />
                 <div className="my-4 flex justify-end px-10">
-                  <CopyPost contents={data.contents} />
+                  <CopyPost contents={data.contents} subSelected={subSelected} />
                 </div>
               </>
             )}

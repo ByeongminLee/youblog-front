@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { Tab, Tabs } from '../common/Tabs';
 
-export const ContentsPost = ({ contents }: { contents: any }) => {
-  const [subSelected, setSubSelected] = useState('blog');
+interface ContentsPostProps {
+  contents: any;
+  subSelected: string;
+  setSubSelected: Dispatch<SetStateAction<string>>;
+}
 
+export const ContentsPost = ({ contents, subSelected, setSubSelected }: ContentsPostProps) => {
   return (
     <>
       <Tabs selected={subSelected} setSelected={setSubSelected} variant="underline">
